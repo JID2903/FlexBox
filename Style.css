@@ -24,6 +24,16 @@ nav a {
     color: AliceBlue;
     border: 3px solid #C4DFE6;
     text-decoration: none;
+    flex-grow: calc(1);
+    flex-basis: 215px;
+    -o-grow: calc(1);
+    -o-basis: 215px;
+    -webkit-grow: calc(1);
+    -webkit-basis: 215px;
+    -moz-grow: calc(1);
+    -moz-basis: 215px;
+    -ms-grow: calc(1);
+    -ms-basis: 215px;
 }
 nav a:hover {
     background-color: #C4DFE6;
@@ -37,7 +47,21 @@ nav {
     background-color: #07575B;
     padding: 5px;
     height: 200px;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    -ms-align-content: center;
+    -o-align-content: center;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -51,4 +75,36 @@ nav {
 nav ul{
     list-style-type: none;
     padding: 0;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+}
+
+.flex-item {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 10px;
+    background-color: #D9B44A;
+    text-align: center;
+    border: 2px solid #4F6457;
+    color: #07575B;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.flex-item-large {
+    flex: 2 1 auto;
+    background-color: #ACD8AA;
 }

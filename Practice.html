@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox Practice</title>
+    <title>Flexbox Full Demo</title>
+    <style>
+    /* FLEX CONTAINER PROPERTIES */
+    .flex-container {
+      display: flex; /* Enables Flexbox */
+
+      flex-direction: row; /* Main axis: row (horizontal), can be row, row-reverse, column, column-reverse */
+      flex-wrap: wrap; /* Allows items to wrap onto multiple lines (wrap, nowrap, wrap-reverse) */
+      flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */
+
+        justify-content: space-around; /* Aligns items along the main axis (start, end, center, space-between, space-around, space-evenly) */
+        align-items: center; /* Aligns items along the cross axis (start, end, center, stretch, baseline) */
+        align-content: space-between; /* Aligns lines when there's extra space in the cross-axis (works with multi-line content) */
+
+      gap: 10px; /* Adds spacing between flex items */
+      row-gap: 20px; /* Adds vertical space between rows */
+      column-gap: 30px; /* Adds horizontal space between columns */
+
+        height: 100vh;
+        border: 4px solid #333;
+        padding: 20px;
+    }
+
+    /* FLEX ITEM PROPERTIES */
+    .flex-item {
+      flex-grow: 1; /* Item grows to fill available space (default is 0) */
+      flex-shrink: 1; /* Item shrinks if necessary (default is 1) */
+      flex-basis: 150px; /* Default size before growing/shrinking */
+      flex: 1 1 150px; /* Shorthand: flex-grow flex-shrink flex-basis */
+
+      align-self: auto; /* Overrides align-items for individual items (auto, start, end, center, stretch, baseline) */
+      order: 0; /* Controls the order of the item (default is 0) */
+
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .flex-item:nth-child(2) {
+      align-self: flex-end; /* This one item aligns to the bottom */
+      order: 2; /* This item will appear third */
+    }
+
+    .flex-item:nth-child(3) {
+      order: -1; /* This item will appear first */
+    }
+    </style>
 </head>
 <body>
-    
+    <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item">Item 2 (align-self, order)</div>
+    <div class="flex-item">Item 3 (order -1)</div>
+    <div class="flex-item">Item 4</div>
+    <div class="flex-item">Item 5</div>
+    </div>
 </body>
 </html>
